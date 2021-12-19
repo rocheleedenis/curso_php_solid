@@ -1,0 +1,19 @@
+{
+    "name": "rocheleedenis/curso_solid_com_php",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Rochele Edenís",
+            "email": "rochele.edenis@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Solid\\Html\\": "src"
+        }
+    }
+}
