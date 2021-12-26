@@ -29,7 +29,17 @@ class HtmlTest extends TestCase
         $html = new Html;
 
         $a = $html->a('http://www.example.com.br', 'My site');
-        $a->attribute([
+        $a->attributes([
+            'class' => 'btn btn-default'
+        ]);
+
+        $this->assertEquals('<a href="http://www.example.com.br" class="btn btn-default">My site</a>', $a);
+    }
+
+    public function test_create_a_tag_with_class_and_id_ataticly()
+    {
+        $a =  Html::a('http://www.example.com.br', 'My site');
+        $a->attributes([
             'class' => 'btn btn-default'
         ]);
 
