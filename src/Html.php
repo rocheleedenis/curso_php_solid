@@ -18,6 +18,8 @@ class Html
     {
         $class = '\Solid\Html\Tag\\' . ucfirst($name);
 
+        array_unshift($arguments, new Attributes);
+
         $reflection = new \ReflectionClass($class);
 
         return $reflection->newInstanceArgs($arguments);

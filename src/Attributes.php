@@ -2,16 +2,20 @@
 
 namespace Solid\Html;
 
-class Attributes
+use Solid\Html\AttributesContract;
+
+class Attributes implements AttributesContract
 {
     private $attributes;
 
-    public function __construct(array $attributes)
+    public function __construct(array $attributes = null)
     {
-        $this->attributes = $attributes;
+        if ($attributes) {
+            $this->attributes = $attributes;
+        }
     }
 
-    public function __toString()
+    public function __toString() :string
     {
         $result = [];
 
@@ -20,5 +24,10 @@ class Attributes
         }
 
         return ' ' . implode(' ', $result);
+    }
+
+    public function setAttributes(array $attributes)
+    {
+        $this->attributes = $attributes;
     }
 }
