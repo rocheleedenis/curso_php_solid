@@ -4,6 +4,7 @@ namespace Solid\Html;
 
 class Html
 {
+    // remove class
     public function img(string $src)
     {
         return '<img src="' . $src . '">';
