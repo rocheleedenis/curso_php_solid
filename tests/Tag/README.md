@@ -1,0 +1,1 @@
+Código baseado no curso [SOLID com PHP](https://www.schoolofnet.com/curso/php/design-patterns-e-php/solid-com-php/) da School of Net.
